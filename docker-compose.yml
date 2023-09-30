@@ -1,0 +1,29 @@
+version: '3'
+services:
+    mysql-sagara-v1:
+        image: mysql
+        container_name: mysql-sagara
+        ports:
+            - "3307:3306"
+        environment:
+            MYSQL_ROOT_PASSWORD: rahasia
+            MYSQL_DATABASE: blog
+        networks:
+            - todo-sagara
+
+    backend-go:
+        image: backend-go-sagara:v1
+        container_name: backend-go-sagara
+        environment:
+            DB_USER: root
+            DB_PASSWORD: rahasia
+            DB_HOST: mysql-sagara  
+            DB_PORT: 3306
+            DB_DATABASE: sagara
+        ports:
+            - "7000:7000"
+        networks:
+            - todo-sagara
+        restart: always 
+networks:
+    todo-sagara:
