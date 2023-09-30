@@ -35,6 +35,6 @@
 [GET]       `localhost:7000/api/blog` : All Blog</br>
 [GET]       `localhost:7000/api/blog/paginated?page=1&limit=3` : Blog by paginated </br>
 [GET]       `localhost:7000/api/blog/{blog_id}/single` : Get One Blog by blog_id</br>
-[PUT]       `localhost:7000/api/blog/{blog_id}/edit` : Edit Status Blog by blog_id</br>
+[PUT]       `localhost:7000/api/blog/{blog_id}/edit` : Edit Blog by blog_id</br>
 [DELETE]    `localhost:7000/api/blog/{blog_id}/delete` : Delete Blog by blog_id</br>
 </br>
